@@ -105,7 +105,7 @@ class Player:
     def dash(self, tiles, particles):
         if abs(self.movement[0]) > 0.6 and self.mana > 0:
             for i in range(int(self.mana/100*16)):
-                particles.append(Particle(self.rect.centerx, self.rect.bottom, random.randint(10, 20), random.randint(1, 360), random.randint(1, 3), color="#f2d3ab", outline=3))
+                if i % 3 == 0: particles.append(Particle(self.rect.centerx, self.rect.bottom, random.randint(10, 40), random.randint(1, 360), random.randint(1, 3), color="#c69fa5", outline=3))
                 self.rect.x += sign(self.movement[0])*unit/2
                 self.mana -= 5
                 for tile in tiles:
