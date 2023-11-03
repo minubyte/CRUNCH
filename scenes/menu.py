@@ -3,13 +3,13 @@ import math
 
 from utils import *
 
-logo = outlined(load_img("crunch"))
+logo = outlined(load_img("crunch", 4))
 logo_size = logo.get_size()
 
 class Menu:
     def __init__(self, screen, gm):
         self.screen: pygame.Surface = screen
-        self.gm = gm        
+        self.gm = gm
 
     def run(self, dt, events):
         t = pygame.time.get_ticks()

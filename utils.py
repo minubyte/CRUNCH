@@ -33,7 +33,7 @@ def draw_text(screen, text, x=100, y=100, color="#fbf5ef", ofs=0, outline=False,
         render = outlined(render)
     screen.blit(render, (x-render.get_width()*ofs, y)) 
 
-def load_img(name, scale=4):
+def load_img(name, scale=1):
     img = pygame.image.load(f"data/{name}.png")
     img.set_colorkey("#000000")
     return pygame.transform.scale_by(img, scale)
